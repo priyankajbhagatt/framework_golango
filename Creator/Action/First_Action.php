@@ -10,7 +10,22 @@ class First_Action extends Action{
 	}
 	public function init(){
 
-		$this->Template('index',array('id'=>1));
+		$this->grab->Template('index',array('id'=>1));
 	}	
+
+	public function jaye(){
+
+			$headerarray = array('jscript'=>array(
+										"jquery.min.js","jquery.scrolly.min.js","skel.min.js","util.js","main.js"	
+											),
+								'style'=>array(
+
+										"main.css"
+									)			 
+
+				);
+			$this->put->create_head($headerarray);
+
+	}
 
 }
